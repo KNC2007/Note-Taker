@@ -20,17 +20,6 @@ app.listen(PORT, () =>
 
 
 
-app.get('/api/notes', (req,res) => {
-or
-app.get('/', (req, res) => {
-
-
-app.post('/api/notes', (req,res) => {
-        or
-app.post('/', (req, res) => {
-
-
-
 
 app.delete('/:note_id', (req, res) => {
 
