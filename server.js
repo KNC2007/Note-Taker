@@ -19,24 +19,6 @@ app.listen(PORT, () =>
 
 
 
-
-
-app.delete('/:note_id', (req, res) => {
-
-});
-
-// GET Route for homepage
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
-
-// GET Route for feedback page
-app.get('/feedback', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/pages/feedback.html'))
-);
-
-
-
 // GIVEN a note-taking application
 // WHEN I open the Note Taker
 // THEN I am presented with a landing page with a link to a notes page
