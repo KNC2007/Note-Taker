@@ -15,16 +15,17 @@ const {
 
 // GET Route for retrieving all the notes  
 notes.get('/api/notes', (req, res) => {
+    console.log("inside get route")
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // GET Route for a specific note
-notes.get('/:note_id', (req, res) => {
+notes.get('/api/notes/:note_id', (req, res) => {
     const noteId = req.params.note_id;
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
-            const result = json.filter((note) => note.note_id === noteId);
+            const result = json.filter((note) => note.id === noteId);
             return result.length > 0
                 ? res.json(result)
                 : res.json('No note with that ID');
@@ -33,13 +34,16 @@ notes.get('/:note_id', (req, res) => {
 
 
 // DELETE Route for a specific note
-notes.delete('/:note_id', (req, res) => {
+notes.delete('/api/notes/:note_id', (req, res) => {
+    console.log('inside delete route')
     const noteId = req.params.note_id;
+    console.log(noteId)
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
+            console.log(json)
 
-            const result = json.filter((note) => note.note_id !== noteId);
+            const result = json.filter((note) => note.id !== noteId);
 
             // Save that array to the filesystem
             writeToFile('./db/db.json', result);
@@ -63,7 +67,7 @@ notes.post('/api/notes', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuid(),
+            id: uuid(),
         };
 
 

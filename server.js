@@ -8,8 +8,9 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
-app.use(route_html);
 app.use(route_api);
+app.use(route_html);
+
 
 
 app.listen(PORT, () =>
