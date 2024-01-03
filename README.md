@@ -12,14 +12,14 @@ The Note Taker application can be used to write and save notes. This application
 6. [Questions](#questions)
 
 ## Installation
-Fork this repo and clone it to your machine. Then install Express.jx. Use the command node server to run the application.
+Fork this repo and clone it to your machine. Then install Express.js. Use the command node server to run the application.
 
 ## Usage Information
 The Note Taker Application uses an Express.js back end and sanves and retireves note data from a JSON file. Existing notes are shown on the left. Use the trash can to delete notes that are no longer needed. Click New Notes to enter a title and note text then save the note.
     
 ![Enter notes and save them in the Note Taker Application.](./public/assets/note%20taker%20application.png)
 
-Link to deployed application: 
+Link to deployed application: https://note-taker-ck-bf631fb498c2.herokuapp.com/ 
 
 ## License
 This project is licensed under the MIT License license.
