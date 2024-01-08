@@ -1,3 +1,10 @@
+node_modules
+.DS_Store
+.vs_code
+vs_code
+Thumbs.db
+.env
+
 # Logs
 logs
 *.log
